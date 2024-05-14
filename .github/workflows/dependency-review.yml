@@ -12,3 +12,5 @@ jobs:
         uses: actions/checkout@v4
       - name: Dependency Review
         uses: StacklokLabs/trusty-dependency-review-action@add_trusty_scores
+        with:
+          comment-summary-in-pr: always
