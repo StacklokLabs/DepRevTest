@@ -14,5 +14,6 @@ jobs:
       - name: Dependency Review
         uses: StacklokLabs/trusty-dependency-review-action@add_trusty_scores
         with:
+          trusty-scores: true
           comment-summary-in-pr: always
           trusty-show: 10
