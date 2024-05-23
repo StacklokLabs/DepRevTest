@@ -17,5 +17,5 @@ jobs:
           trusty-scores: true
           comment-summary-in-pr: always
           trusty-show: 10
-          env:
-            GITHUB_TOKEN: ${{ github.token }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
