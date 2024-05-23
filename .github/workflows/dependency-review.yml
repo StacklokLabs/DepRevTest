@@ -13,9 +13,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Dependency Review
         uses: StacklokLabs/trusty-dependency-review-action@add_trusty_scores
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         with:
           trusty-scores: true
           comment-summary-in-pr: always
           trusty-show: 10
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
