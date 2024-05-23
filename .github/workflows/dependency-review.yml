@@ -11,11 +11,11 @@ jobs:
     steps:
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Dependency Review
         uses: StacklokLabs/trusty-dependency-review-action@add_trusty_scores
         with:
           trusty-scores: true
           comment-summary-in-pr: always
           trusty-show: 10
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
